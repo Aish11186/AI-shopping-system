@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="compare-container">
+  <div class="page-header">
+    <a href="javascript:history.back()" class="back-link">&larr; Back to Results</a>
+    <h1>Side-by-Side Product Comparison</h1>
+    <p>Compare specifications, pricing, and ratings across your selected electronics.</p>
+  </div>
+
+  {% if products|length >= 2 %}
+    <div class="comparison-table-wrapper">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th class="spec-col-header">Feature / Specification</th>
+            {% for p in products %}
+              <th class="product-col-header">
+                <div class="compare-card-top">
+                  <span class="compare-brand">{{ p.brand }}</span>
+                  <h3 class="compare-name">{{ p.name }}</h3>
+                  <div class="compare-price">₹{{ "{:,}".format(p.price) }}</div>
+                  <div class="compare-rating">★ {{ p.rating }} ({{ p.stock }} in stock)</div>
+                  <a href="{{ url_for('add_to_cart', product_id=p.id) }}" class="btn-primary btn-sm btn-block">Add to Cart</a>
+                </div>
+              </th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="feature-title">Category</td>
+            {% for p in products %}
+              <td>{{ p.category }}</td>
+            {% endfor %}
+          </tr>
+          <tr>
+            <td class="feature-title">Overview</td>
+            {% for p in products %}
+              <td class="desc-cell">{{ p.description }}</td>
+            {% endfor %}
+          </tr>
+
+          <!-- Dynamic Specification Rows -->
+          {% for spec_key in spec_keys %}
+            <tr>
+              <td class="feature-title">{{ spec_key|replace('_', ' ')|capitalize }}</td>
+              {% for p in products %}
+                <td class="spec-val-cell">
+                  {% if spec_key in p.specifications %}
+                    {% set val = p.specifications[spec_key] %}
+                    {% if val is sameas true %}
+                      <span class="tag-yes">Yes</span>
+                    {% elif val is sameas false %}
+                      <span class="tag-no">No</span>
+                    {% else %}
+                      {{ val }}
+                    {% endif %}
+                  {% else %}
+                    <span class="text-muted">&mdash;</span>
+                  {% endif %}
+                </td>
+              {% endfor %}
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <div class="empty-state">
+      <div class="empty-icon">⚖️</div>
+      <h3>Please select at least 2 products to compare</h3>
+      <p>Go to the search recommendations page and check the "Select to Compare" box for 2 or 3 products.</p>
+      <div class="empty-actions">
+        <a href="{{ url_for('index') }}" class="btn-primary">Browse Catalogue</a>
+      </div>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}
+

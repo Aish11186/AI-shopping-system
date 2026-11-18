@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="cart-container">
+  <div class="page-header">
+    <h1>Your Shopping Cart</h1>
+    <p>Review your selected electronics before proceeding to simulated checkout.</p>
+  </div>
+
+  {% if items %}
+    <div class="cart-layout">
+      <!-- Items Table -->
+      <div class="cart-items-panel">
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Subtotal</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in items %}
+              <tr>
+                <td>
+                  <div class="cart-prod-info">
+                    <span class="cart-prod-brand">{{ item.product.brand }}</span>
+                    <strong class="cart-prod-name">{{ item.product.name }}</strong>
+                    <span class="cart-prod-cat">{{ item.product.category }}</span>
+                  </div>
+                </td>
+                <td class="price-cell">₹{{ "{:,}".format(item.product.price) }}</td>
+                <td>
+                  <form action="{{ url_for('update_cart') }}" method="POST" class="qty-form">
+                    <input type="hidden" name="product_id" value="{{ item.product.id }}">
+                    <input type="number" name="quantity" value="{{ item.quantity }}" min="1" max="{{ item.max_stock }}" class="qty-input" onchange="this.form.submit()">
+                    <span class="max-stock-hint">Max: {{ item.max_stock }}</span>
+                  </form>
+                </td>
+                <td class="price-cell subtotal-bold">₹{{ "{:,}".format(item.item_total) }}</td>
+                <td>
+                  <a href="{{ url_for('remove_from_cart', product_id=item.product.id) }}" class="btn-remove" title="Remove item">&times; Remove</a>
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+        <div class="cart-actions-row">
+          <a href="{{ url_for('index') }}" class="btn-secondary">&larr; Continue Shopping</a>
+        </div>
+      </div>
+
+      <!-- Order Summary Card -->
+      <div class="cart-summary-panel">
+        <div class="summary-card">
+          <h3>Order Summary</h3>
+          <div class="summary-line">
+            <span>Items Subtotal:</span>
+            <span>₹{{ "{:,}".format(subtotal) }}</span>
+          </div>
+          <div class="summary-line">
+            <span>Standard Delivery:</span>
+            <span class="free-text">FREE</span>
+          </div>
+          <div class="summary-line">
+            <span>GST / Taxes:</span>
+            <span>Included</span>
+          </div>
+          <hr class="summary-divider">
+          <div class="summary-line total-line">
+            <strong>Total Amount:</strong>
+            <strong class="total-price">₹{{ "{:,}".format(subtotal) }}</strong>
+          </div>
+
+          <a href="{{ url_for('checkout') }}" class="btn-primary btn-block btn-lg">Proceed to Checkout &rarr;</a>
+        </div>
+      </div>
+    </div>
+  {% else %}
+    <div class="empty-state">
+      <div class="empty-icon">🛒</div>
+      <h3>Your shopping cart is empty</h3>
+      <p>Browse our catalogue or use the AI Search Assistant to find products matching your needs.</p>
+      <div class="empty-actions">
+        <a href="{{ url_for('index') }}" class="btn-primary">Start Shopping</a>
+      </div>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}
+

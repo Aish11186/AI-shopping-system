@@ -1,0 +1,132 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="results-container">
+  <!-- Query & Extracted Constraints Banner -->
+  <div class="query-summary-card">
+    <div class="query-header">
+      <span class="badge-ai">AI Analysis</span>
+      <h2>Your Search: &ldquo;{{ query }}&rdquo;</h2>
+    </div>
+
+    <div class="constraints-box">
+      <div class="constraint-item">
+        <span class="c-label">Identified Category:</span>
+        <span class="c-val">{{ constraints.category or "All Electronics" }}</span>
+      </div>
+      <div class="constraint-item">
+        <span class="c-label">Max Budget:</span>
+        <span class="c-val">{% if constraints.max_price %}₹{{ "{:,}".format(constraints.max_price) }}{% else %}Not specified{% endif %}</span>
+      </div>
+      {% if constraints.min_price %}
+      <div class="constraint-item">
+        <span class="c-label">Min Price:</span>
+        <span class="c-val">₹{{ "{:,}".format(constraints.min_price) }}</span>
+      </div>
+      {% endif %}
+      {% if constraints.preferences %}
+      <div class="constraint-item">
+        <span class="c-label">Extracted Preferences:</span>
+        <span class="c-val">
+          {% if constraints.preferences is mapping %}
+            {% for k, v in constraints.preferences.items() if v %}
+              <span class="pref-tag">{{ k|replace('_', ' ') }}: {{ v }}</span>
+            {% endfor %}
+          {% elif constraints.preferences is iterable %}
+            {% for p in constraints.preferences %}
+              <span class="pref-tag">{{ p }}</span>
+            {% endfor %}
+          {% endif %}
+        </span>
+      </div>
+      {% endif %}
+      <div class="constraint-item">
+        <span class="c-label">Matching Products:</span>
+        <span class="c-val"><strong>{{ total_matches }}</strong> found</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Comparison Action Bar (Floating when items selected) -->
+  <div id="compareBar" class="compare-bar" style="display: none;">
+    <div class="compare-bar-content">
+      <span>Selected for comparison: <strong id="compareCount">0</strong> (Select 2 or 3)</span>
+      <button onclick="launchComparison()" class="btn-compare-action">Compare Now &rarr;</button>
+    </div>
+  </div>
+
+  {% if results %}
+    <div class="recommendations-list">
+      {% for p in results %}
+        <div class="rec-card">
+          <div class="rec-card-top">
+            <div class="rec-brand-rank">
+              <span class="rank-tag">#{{ loop.index }} Recommendation</span>
+              <span class="brand-text">{{ p.brand }} &bull; {{ p.category }}</span>
+            </div>
+            <div class="match-score">
+              <span class="score-label">Relevance Match</span>
+              <div class="score-pill">{{ p.relevance_score or 95 }}%</div>
+            </div>
+          </div>
+
+          <div class="rec-card-body">
+            <div class="rec-main-info">
+              <h3 class="rec-title">{{ p.name }}</h3>
+              <div class="rec-meta">
+                <span class="price-val">₹{{ "{:,}".format(p.price) }}</span>
+                <span class="rating-val">★ {{ p.rating }}</span>
+                <span class="stock-val">({{ p.stock }} units in stock)</span>
+              </div>
+              <p class="rec-desc">{{ p.description }}</p>
+
+              <!-- Key Specs -->
+              <div class="specs-grid">
+                {% for k, v in p.specifications.items() %}
+                  <div class="spec-entry">
+                    <span class="spec-name">{{ k|replace('_', ' ')|capitalize }}:</span>
+                    <span class="spec-detail">{{ v }}</span>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+
+            <!-- AI Explanation Box -->
+            {% if p.ai_explanation %}
+              <div class="ai-rationale-box">
+                <div class="rationale-header">
+                  <span class="ai-sparkle">✨</span>
+                  <strong>Why Gemini Recommends This:</strong>
+                </div>
+                <p class="rationale-text">{{ p.ai_explanation }}</p>
+              </div>
+            {% endif %}
+          </div>
+
+          <!-- Actions -->
+          <div class="rec-card-footer">
+            <label class="compare-checkbox-label">
+              <input type="checkbox" class="compare-cb" value="{{ p.id }}" onchange="handleCompareCheck(this)">
+              <span>Select to Compare</span>
+            </label>
+
+            <div class="action-buttons">
+              <a href="{{ url_for('add_to_cart', product_id=p.id) }}" class="btn-primary">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="empty-state">
+      <div class="empty-icon">🔎</div>
+      <h3>No matching products found</h3>
+      <p>We could not find items strictly matching your exact constraints. Try widening your budget or simplifying your requested features.</p>
+      <div class="empty-actions">
+        <a href="{{ url_for('index') }}" class="btn-secondary">&larr; Back to Home</a>
+      </div>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}
+

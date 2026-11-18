@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="checkout-container">
+  <div class="page-header">
+    <a href="{{ url_for('cart') }}" class="back-link">&larr; Back to Cart</a>
+    <h1>Simulated Checkout</h1>
+    <p>Complete your delivery and payment details to place your order.</p>
+  </div>
+
+  <div class="checkout-layout">
+    <!-- Form Panel -->
+    <div class="checkout-form-panel">
+      <form action="{{ url_for('checkout') }}" method="POST" class="checkout-form">
+        <div class="form-section">
+          <h3>1. Delivery Information</h3>
+          <div class="form-group">
+            <label for="name">Full Name <span class="req">*</span></label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="e.g. Aarav Sharma" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address <span class="req">*</span></label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="e.g. aarav@gmail.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Complete Delivery Address <span class="req">*</span></label>
+            <textarea id="address" name="address" rows="3" class="form-control" placeholder="Flat No., Street, City, PIN Code" required></textarea>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>2. Payment Method (Simulated)</h3>
+          <p class="form-hint">For lab demonstration only &mdash; no real transactions or sensitive bank credentials are used.</p>
+
+          <div class="payment-options">
+            <label class="payment-card-option">
+              <input type="radio" name="payment_method" value="UPI (GPay / PhonePe / Paytm)" checked>
+              <div class="payment-info">
+                <strong>UPI Instant Payment</strong>
+                <span>Pay via Google Pay, PhonePe, Paytm, or UPI ID</span>
+              </div>
+            </label>
+
+            <label class="payment-card-option">
+              <input type="radio" name="payment_method" value="Credit / Debit Card (Simulated)">
+              <div class="payment-info">
+                <strong>Credit or Debit Card</strong>
+                <span>Visa, Mastercard, RuPay &amp; American Express</span>
+              </div>
+            </label>
+
+            <label class="payment-card-option">
+              <input type="radio" name="payment_method" value="Cash on Delivery (COD)">
+              <div class="payment-info">
+                <strong>Cash on Delivery (COD)</strong>
+                <span>Pay in cash upon doorstep package delivery</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary btn-block btn-lg">Authorize &amp; Place Order &rarr;</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Review Summary Panel -->
+    <div class="checkout-summary-panel">
+      <div class="summary-card">
+        <h3>Order Items ({{ items|length }})</h3>
+        <div class="checkout-items-list">
+          {% for item in items %}
+            <div class="checkout-item-row">
+              <div class="c-item-meta">
+                <strong>{{ item.product.name }}</strong>
+                <span class="c-item-qty">Qty: {{ item.quantity }} &times; ₹{{ "{:,}".format(item.product.price) }}</span>
+              </div>
+              <div class="c-item-subtotal">₹{{ "{:,}".format(item.item_total) }}</div>
+            </div>
+          {% endfor %}
+        </div>
+
+        <hr class="summary-divider">
+        <div class="summary-line">
+          <span>Subtotal:</span>
+          <span>₹{{ "{:,}".format(total) }}</span>
+        </div>
+        <div class="summary-line">
+          <span>Delivery:</span>
+          <span class="free-text">FREE</span>
+        </div>
+        <div class="summary-line total-line">
+          <strong>Total to Pay:</strong>
+          <strong class="total-price">₹{{ "{:,}".format(total) }}</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+

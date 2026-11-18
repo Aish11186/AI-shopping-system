@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="hero-section">
+  <div class="hero-badge">Gemini-Powered Natural Language Shopping</div>
+  <h1 class="hero-title">Find the Right Gadget with Everyday English</h1>
+  <p class="hero-subtitle">Describe what you need, your budget, or essential features. Our AI extracts constraints, ranks matching electronics, and explains recommendations.</p>
+
+  <!-- Large Natural Language Search Box -->
+  <form action="{{ url_for('search') }}" method="GET" class="search-form">
+    <div class="search-bar-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" name="q" id="searchInput" class="search-input"
+             placeholder="e.g., I want wireless headphones under ₹3000 with good battery life"
+             required autocomplete="off">
+      <button type="submit" class="search-submit-btn">Ask AI</button>
+    </div>
+  </form>
+
+  <!-- Example Search Suggestions -->
+  <div class="search-chips">
+    <span class="chips-label">Try asking:</span>
+    <button type="button" class="chip" onclick="fillQuery('I want wireless headphones under ₹3000 with good battery life')">
+      🎧 Wireless headphones &lt; ₹3000
+    </button>
+    <button type="button" class="chip" onclick="fillQuery('Suggest a laptop for programming with at least 16GB RAM')">
+      💻 Laptop for programming (16GB RAM)
+    </button>
+    <button type="button" class="chip" onclick="fillQuery('Find a smartphone under ₹20000 with a good camera')">
+      📱 Phone &lt; ₹20,000 with great camera
+    </button>
+    <button type="button" class="chip" onclick="fillQuery('I need a smartwatch with fitness tracking')">
+      ⌚ Smartwatch with fitness tracking
+    </button>
+  </div>
+</section>
+
+<!-- Category Shortcuts -->
+<section class="categories-section">
+  <div class="section-header">
+    <h2>Explore by Category</h2>
+    <p>Browse through our catalogue of 50 verified electronics</p>
+  </div>
+  <div class="category-grid">
+    {% for cat in categories %}
+      <a href="{{ url_for('category_view', cat_name=cat.name) }}" class="category-card">
+        <span class="cat-icon">{{ cat.icon }}</span>
+        <span class="cat-name">{{ cat.name }}</span>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Featured Products Grid -->
+<section class="featured-section">
+  <div class="section-header">
+    <h2>Featured Electronics</h2>
+    <p>Popular picks across headphones, laptops, smartphones and peripherals</p>
+  </div>
+
+  <div class="product-grid">
+    {% for p in featured %}
+      <div class="product-card">
+        <div class="card-brand">{{ p.brand }}</div>
+        <h3 class="card-title">{{ p.name }}</h3>
+        <div class="card-rating">★ {{ p.rating }} &bull; <span class="stock-tag in-stock">{{ p.stock }} in stock</span></div>
+        <p class="card-desc">{{ p.description }}</p>
+
+        <div class="card-specs">
+          {% for k, v in p.specifications.items() %}
+            {% if loop.index <= 3 %}
+              <div class="spec-chip"><span class="spec-k">{{ k|replace('_', ' ')|capitalize }}:</span> {{ v }}</div>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <div class="card-footer">
+          <div class="card-price">₹{{ "{:,}".format(p.price) }}</div>
+          <div class="card-actions">
+            <a href="{{ url_for('add_to_cart', product_id=p.id) }}" class="btn-primary btn-sm">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
+

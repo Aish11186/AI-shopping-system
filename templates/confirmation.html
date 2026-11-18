@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="confirmation-container">
+  <div class="confirm-card">
+    <div class="confirm-icon">🎉</div>
+    <span class="status-pill status-confirmed">Status: {{ order.status }}</span>
+    <h1>Order Placed Successfully!</h1>
+    <p class="confirm-sub">Thank you for your purchase, <strong>{{ order.customer.name }}</strong>. Your order is confirmed and being prepared for shipment.</p>
+
+    <div class="order-id-box">
+      <span class="oid-label">Your Order ID:</span>
+      <span class="oid-val">{{ order.order_id }}</span>
+      <span class="oid-date">Placed on {{ order.date }}</span>
+    </div>
+
+    <!-- Order Details Grid -->
+    <div class="details-grid">
+      <div class="details-col">
+        <h4>Delivery Address</h4>
+        <p>{{ order.customer.name }}</p>
+        <p>{{ order.customer.address }}</p>
+        <p>Email: {{ order.customer.email }}</p>
+      </div>
+
+      <div class="details-col">
+        <h4>Payment Summary</h4>
+        <p>Method: <strong>{{ order.payment_method }}</strong></p>
+        <p>Payment Status: <span class="badge-success">Paid Successfully</span></p>
+        <p>Total Paid: <strong class="total-price">₹{{ "{:,}".format(order.total_amount) }}</strong></p>
+      </div>
+    </div>
+
+    <!-- Purchased Items Table -->
+    <div class="ordered-items-section">
+      <h4>Purchased Items</h4>
+      <table class="receipt-table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Brand</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in order['items'] %}
+            <tr>
+              <td><strong>{{ item.product.name }}</strong></td>
+              <td>{{ item.product.brand }}</td>
+              <td>{{ item.quantity }}</td>
+              <td>₹{{ "{:,}".format(item.product.price) }}</td>
+              <td>₹{{ "{:,}".format(item.item_total) }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="confirm-actions">
+      <a href="{{ url_for('orders') }}" class="btn-primary">View All Orders &rarr;</a>
+      <a href="{{ url_for('index') }}" class="btn-secondary">&larr; Back to Home</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

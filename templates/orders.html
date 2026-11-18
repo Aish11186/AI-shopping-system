@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="orders-container">
+  <div class="page-header">
+    <h1>Track Orders (State Machine Lifecycle)</h1>
+    <p>Live order lifecycle corresponding to Experiment 7 State-Chart Diagram.</p>
+  </div>
+
+  {% if orders %}
+    <div class="orders-list">
+      {% for order in orders %}
+        <div class="order-card">
+          <div class="order-card-header">
+            <div>
+              <span class="oid-tag">{{ order.order_id }}</span>
+              <span class="order-date">&bull; {{ order.date }}</span>
+            </div>
+            <div class="order-status-badge">
+              <span class="status-pill status-{{ order.status|lower }}">{{ order.status }}</span>
+            </div>
+          </div>
+
+          <div class="order-card-body">
+            <div class="order-customer-line">
+              <strong>Customer:</strong> {{ order.customer.name }} ({{ order.customer.email }}) &bull;
+              <strong>Address:</strong> {{ order.customer.address }}
+            </div>
+
+            <div class="order-items-summary">
+              <strong>Items ({{ order['items']|length }}):</strong>
+              <ul class="mini-items-list">
+                {% for item in order['items'] %}
+                  <li>{{ item.quantity }}x {{ item.product.name }} (&lrm;₹{{ "{:,}".format(item.product.price) }})</li>
+                {% endfor %}
+              </ul>
+            </div>
+
+            <div class="order-card-footer">
+              <div>
+                <strong>Payment:</strong> {{ order.payment_method }}
+              </div>
+              <div class="order-total-block">
+                <span>Total Amount:</span>
+                <strong class="total-price">₹{{ "{:,}".format(order.total_amount) }}</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="empty-state">
+      <div class="empty-icon">📦</div>
+      <h3>No orders placed yet</h3>
+      <p>Place an order through simulated checkout to see live order tracking and state transitions.</p>
+      <div class="empty-actions">
+        <a href="{{ url_for('index') }}" class="btn-primary">Browse Catalogue</a>
+      </div>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

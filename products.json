@@ -1,0 +1,899 @@
+[
+  {
+    "id": 1,
+    "name": "boAt Rockerz 450 Pro",
+    "brand": "boAt",
+    "category": "Headphones and Earbuds",
+    "price": 1999,
+    "rating": 4.3,
+    "stock": 33,
+    "specifications": {
+      "type": "On-Ear",
+      "wireless": true,
+      "battery_life": "70 hours",
+      "noise_cancellation": "Passive Noise Isolation",
+      "connectivity": "Bluetooth 5.0, AUX",
+      "weight": "168g"
+    },
+    "description": "Lightweight wireless on-ear headphones with 70 hours massive playback and ASAP fast charging."
+  },
+  {
+    "id": 2,
+    "name": "boAt Airdopes 141",
+    "brand": "boAt",
+    "category": "Headphones and Earbuds",
+    "price": 1299,
+    "rating": 4.1,
+    "stock": 40,
+    "specifications": {
+      "type": "In-Ear TWS",
+      "wireless": true,
+      "battery_life": "42 hours",
+      "noise_cancellation": "ENx Environmental Noise Cancellation",
+      "connectivity": "Bluetooth 5.1",
+      "weight": "60g"
+    },
+    "description": "True wireless earbuds with low latency BEAST mode for gaming and 42 hours total playback."
+  },
+  {
+    "id": 3,
+    "name": "Sony WH-CH520",
+    "brand": "Sony",
+    "category": "Headphones and Earbuds",
+    "price": 4490,
+    "rating": 4.5,
+    "stock": 20,
+    "specifications": {
+      "type": "On-Ear",
+      "wireless": true,
+      "battery_life": "50 hours",
+      "noise_cancellation": "Passive Noise Isolation",
+      "connectivity": "Bluetooth 5.2, Multipoint",
+      "weight": "147g"
+    },
+    "description": "Lightweight wireless headphones featuring DSEE audio upscaling and multipoint pairing."
+  },
+  {
+    "id": 4,
+    "name": "Sony WH-1000XM4",
+    "brand": "Sony",
+    "category": "Headphones and Earbuds",
+    "price": 22990,
+    "rating": 4.8,
+    "stock": 12,
+    "specifications": {
+      "type": "Over-Ear",
+      "wireless": true,
+      "battery_life": "30 hours",
+      "noise_cancellation": "Industry Leading Active Noise Cancellation (ANC)",
+      "connectivity": "Bluetooth 5.0, LDAC, AUX",
+      "weight": "254g"
+    },
+    "description": "Premium noise-cancelling headphones with dual noise sensor technology and touch controls."
+  },
+  {
+    "id": 5,
+    "name": "Sony WF-C500",
+    "brand": "Sony",
+    "category": "Headphones and Earbuds",
+    "price": 4990,
+    "rating": 4.3,
+    "stock": 25,
+    "specifications": {
+      "type": "In-Ear TWS",
+      "wireless": true,
+      "battery_life": "20 hours",
+      "noise_cancellation": "Passive Noise Isolation",
+      "connectivity": "Bluetooth 5.0",
+      "weight": "35g"
+    },
+    "description": "Ergonomic compact true wireless earbuds with high quality sound and IPX4 splash rating."
+  },
+  {
+    "id": 6,
+    "name": "JBL Tune 510BT",
+    "brand": "JBL",
+    "category": "Headphones and Earbuds",
+    "price": 2899,
+    "rating": 4.2,
+    "stock": 28,
+    "specifications": {
+      "type": "On-Ear",
+      "wireless": true,
+      "battery_life": "40 hours",
+      "noise_cancellation": "Passive Noise Isolation",
+      "connectivity": "Bluetooth 5.0",
+      "weight": "160g"
+    },
+    "description": "Wireless on-ear headphones with renowned JBL Pure Bass sound and hands-free calls."
+  },
+  {
+    "id": 7,
+    "name": "JBL Live 660NC",
+    "brand": "JBL",
+    "category": "Headphones and Earbuds",
+    "price": 8999,
+    "rating": 4.4,
+    "stock": 15,
+    "specifications": {
+      "type": "Over-Ear",
+      "wireless": true,
+      "battery_life": "50 hours",
+      "noise_cancellation": "Adaptive Active Noise Cancellation (ANC)",
+      "connectivity": "Bluetooth 5.0, AUX",
+      "weight": "265g"
+    },
+    "description": "Over-ear wireless headphones with Adaptive Noise Cancelling and ambient aware technology."
+  },
+  {
+    "id": 8,
+    "name": "OnePlus Nord Buds 2",
+    "brand": "OnePlus",
+    "category": "Headphones and Earbuds",
+    "price": 2799,
+    "rating": 4.3,
+    "stock": 30,
+    "specifications": {
+      "type": "In-Ear TWS",
+      "wireless": true,
+      "battery_life": "36 hours",
+      "noise_cancellation": "25dB Active Noise Cancellation (ANC)",
+      "connectivity": "Bluetooth 5.3",
+      "weight": "48g"
+    },
+    "description": "Active noise cancellation earbuds with 12.4mm dynamic drivers and BassWave enhancement."
+  },
+  {
+    "id": 9,
+    "name": "Apple AirPods Pro (2nd Gen)",
+    "brand": "Apple",
+    "category": "Headphones and Earbuds",
+    "price": 20900,
+    "rating": 4.8,
+    "stock": 10,
+    "specifications": {
+      "type": "In-Ear TWS",
+      "wireless": true,
+      "battery_life": "30 hours",
+      "noise_cancellation": "Pro-level Active Noise Cancellation (ANC)",
+      "connectivity": "Bluetooth 5.3, H2 chip",
+      "weight": "50g"
+    },
+    "description": "Flagship wireless earbuds with Adaptive Audio, Transparency mode, and MagSafe charging case."
+  },
+  {
+    "id": 10,
+    "name": "Logitech G435 Lightspeed",
+    "brand": "Logitech",
+    "category": "Headphones and Earbuds",
+    "price": 5495,
+    "rating": 4.4,
+    "stock": 18,
+    "specifications": {
+      "type": "Over-Ear Gaming",
+      "wireless": true,
+      "battery_life": "18 hours",
+      "noise_cancellation": "Beamforming Mics Noise Reduction",
+      "connectivity": "Lightspeed Wireless, Bluetooth",
+      "weight": "165g"
+    },
+    "description": "Ultra-lightweight gaming headset with low-latency Lightspeed connectivity for PC and mobile."
+  },
+  {
+    "id": 11,
+    "name": "Samsung Galaxy M34 5G",
+    "brand": "Samsung",
+    "category": "Smartphones",
+    "price": 15999,
+    "rating": 4.2,
+    "stock": 25,
+    "specifications": {
+      "ram": "6GB",
+      "storage": "128GB",
+      "camera": "50MP OIS Triple Camera",
+      "battery": "6000mAh",
+      "display": "6.5-inch 120Hz Super AMOLED",
+      "processor": "Exynos 1280"
+    },
+    "description": "Value powerhouse with monster 6000mAh battery and smooth 120Hz Super AMOLED display."
+  },
+  {
+    "id": 12,
+    "name": "Samsung Galaxy S23 FE",
+    "brand": "Samsung",
+    "category": "Smartphones",
+    "price": 39999,
+    "rating": 4.4,
+    "stock": 14,
+    "specifications": {
+      "ram": "8GB",
+      "storage": "128GB",
+      "camera": "50MP + 12MP + 8MP 3x Telephoto",
+      "battery": "4500mAh",
+      "display": "6.4-inch Dynamic AMOLED 2X",
+      "processor": "Exynos 2200"
+    },
+    "description": "Premium flagship experience with professional grade camera system and IP68 water resistance."
+  },
+  {
+    "id": 13,
+    "name": "Samsung Galaxy S24 Ultra",
+    "brand": "Samsung",
+    "category": "Smartphones",
+    "price": 119999,
+    "rating": 4.8,
+    "stock": 8,
+    "specifications": {
+      "ram": "12GB",
+      "storage": "256GB",
+      "camera": "200MP Quad Camera with 5x Optical Zoom",
+      "battery": "5000mAh",
+      "display": "6.8-inch QHD+ Dynamic AMOLED",
+      "processor": "Snapdragon 8 Gen 3"
+    },
+    "description": "The ultimate AI smartphone with built-in S Pen, titanium frame, and 200MP camera system."
+  },
+  {
+    "id": 14,
+    "name": "OnePlus Nord CE 3 Lite 5G",
+    "brand": "OnePlus",
+    "category": "Smartphones",
+    "price": 17499,
+    "rating": 4.3,
+    "stock": 30,
+    "specifications": {
+      "ram": "8GB",
+      "storage": "128GB",
+      "camera": "108MP Main Camera",
+      "battery": "5000mAh",
+      "display": "6.72-inch 120Hz FHD+",
+      "processor": "Snapdragon 695 5G"
+    },
+    "description": "Smooth budget 5G phone with fast 67W SUPERVOOC charging and dual stereo speakers."
+  },
+  {
+    "id": 15,
+    "name": "OnePlus 12R",
+    "brand": "OnePlus",
+    "category": "Smartphones",
+    "price": 39999,
+    "rating": 4.6,
+    "stock": 16,
+    "specifications": {
+      "ram": "16GB",
+      "storage": "256GB",
+      "camera": "50MP Sony IMX890 with OIS",
+      "battery": "5500mAh",
+      "display": "6.78-inch 120Hz 1.5K ProXDR LTPO4",
+      "processor": "Snapdragon 8 Gen 2"
+    },
+    "description": "High-performance flagship killer featuring 100W fast charge and exceptional gaming performance."
+  },
+  {
+    "id": 16,
+    "name": "Apple iPhone 13",
+    "brand": "Apple",
+    "category": "Smartphones",
+    "price": 48900,
+    "rating": 4.7,
+    "stock": 20,
+    "specifications": {
+      "ram": "4GB",
+      "storage": "128GB",
+      "camera": "12MP Dual Camera with Sensor Shift",
+      "battery": "3240mAh",
+      "display": "6.1-inch Super Retina XDR OLED",
+      "processor": "A15 Bionic"
+    },
+    "description": "Reliable Apple flagship with Cinematic mode, durable Ceramic Shield and all-day battery."
+  },
+  {
+    "id": 17,
+    "name": "Apple iPhone 15",
+    "brand": "Apple",
+    "category": "Smartphones",
+    "price": 69900,
+    "rating": 4.7,
+    "stock": 15,
+    "specifications": {
+      "ram": "6GB",
+      "storage": "128GB",
+      "camera": "48MP Advanced Dual Camera",
+      "battery": "3349mAh",
+      "display": "6.1-inch Dynamic Island Super Retina",
+      "processor": "A16 Bionic"
+    },
+    "description": "Next-gen iPhone with Dynamic Island, USB-C connectivity, and high-resolution 48MP main camera."
+  },
+  {
+    "id": 18,
+    "name": "Apple iPhone 15 Pro",
+    "brand": "Apple",
+    "category": "Smartphones",
+    "price": 124900,
+    "rating": 4.9,
+    "stock": 7,
+    "specifications": {
+      "ram": "8GB",
+      "storage": "128GB",
+      "camera": "48MP Pro Triple Camera + LiDAR",
+      "battery": "3274mAh",
+      "display": "6.1-inch 120Hz ProMotion OLED",
+      "processor": "A17 Pro"
+    },
+    "description": "Lightweight aerospace-grade titanium design with customizable Action button and console gaming."
+  },
+  {
+    "id": 19,
+    "name": "ASUS ROG Phone 8 Pro",
+    "brand": "ASUS",
+    "category": "Smartphones",
+    "price": 94999,
+    "rating": 4.7,
+    "stock": 5,
+    "specifications": {
+      "ram": "16GB",
+      "storage": "512GB",
+      "camera": "50MP Gimbal Triple Camera",
+      "battery": "5500mAh",
+      "display": "6.78-inch 165Hz Samsung AMOLED",
+      "processor": "Snapdragon 8 Gen 3"
+    },
+    "description": "Hardcore gaming smartphone with AirTrigger ultrasonic controls and AniMe Vision LED display."
+  },
+  {
+    "id": 20,
+    "name": "Samsung Galaxy A15 5G",
+    "brand": "Samsung",
+    "category": "Smartphones",
+    "price": 14499,
+    "rating": 4.1,
+    "stock": 32,
+    "specifications": {
+      "ram": "6GB",
+      "storage": "128GB",
+      "camera": "50MP Triple Camera",
+      "battery": "5000mAh",
+      "display": "6.5-inch 90Hz Super AMOLED",
+      "processor": "MediaTek Dimensity 6100+"
+    },
+    "description": "Affordable 5G phone featuring a vibrant Super AMOLED display and 4 years of OS upgrades."
+  },
+  {
+    "id": 21,
+    "name": "ASUS Vivobook 15",
+    "brand": "ASUS",
+    "category": "Laptops",
+    "price": 38990,
+    "rating": 4.2,
+    "stock": 18,
+    "specifications": {
+      "processor": "Intel Core i3-1215U (12th Gen)",
+      "ram": "8GB DDR4",
+      "storage": "512GB NVMe SSD",
+      "graphics": "Intel UHD Graphics",
+      "battery_life": "6 hours",
+      "display": "15.6-inch FHD Anti-Glare",
+      "weight": "1.7kg"
+    },
+    "description": "Slim, lightweight everyday laptop designed for students, online learning and office productivity."
+  },
+  {
+    "id": 22,
+    "name": "ASUS TUF Gaming A15",
+    "brand": "ASUS",
+    "category": "Laptops",
+    "price": 65990,
+    "rating": 4.5,
+    "stock": 12,
+    "specifications": {
+      "processor": "AMD Ryzen 7 7735HS",
+      "ram": "16GB DDR5",
+      "storage": "512GB NVMe SSD",
+      "graphics": "NVIDIA GeForce RTX 3050 4GB",
+      "battery_life": "7 hours",
+      "display": "15.6-inch 144Hz FHD",
+      "weight": "2.2kg"
+    },
+    "description": "Military-grade durable gaming laptop equipped with high-refresh display and dual fans."
+  },
+  {
+    "id": 23,
+    "name": "Lenovo IdeaPad Slim 3",
+    "brand": "Lenovo",
+    "category": "Laptops",
+    "price": 46990,
+    "rating": 4.3,
+    "stock": 22,
+    "specifications": {
+      "processor": "Intel Core i5-12450H",
+      "ram": "16GB LPDDR5",
+      "storage": "512GB SSD",
+      "graphics": "Intel Iris Xe",
+      "battery_life": "7 hours",
+      "display": "15.6-inch FHD IPS",
+      "weight": "1.62kg"
+    },
+    "description": "Fast and lightweight multitasking laptop featuring rapid charge and physical privacy shutter."
+  },
+  {
+    "id": 24,
+    "name": "Lenovo Legion 5 Pro",
+    "brand": "Lenovo",
+    "category": "Laptops",
+    "price": 114990,
+    "rating": 4.7,
+    "stock": 8,
+    "specifications": {
+      "processor": "AMD Ryzen 7 7745HX",
+      "ram": "16GB DDR5",
+      "storage": "1TB NVMe SSD",
+      "graphics": "NVIDIA GeForce RTX 4060 8GB",
+      "battery_life": "6 hours",
+      "display": "16-inch WQXGA 165Hz IPS",
+      "weight": "2.5kg"
+    },
+    "description": "High-end gaming and engineering workstation with Coldfront 5.0 cooling and 165Hz color-accurate display."
+  },
+  {
+    "id": 25,
+    "name": "HP 15s",
+    "brand": "HP",
+    "category": "Laptops",
+    "price": 52990,
+    "rating": 4.3,
+    "stock": 20,
+    "specifications": {
+      "processor": "Intel Core i5-1235U",
+      "ram": "16GB DDR4",
+      "storage": "512GB SSD",
+      "graphics": "Intel Iris Xe",
+      "battery_life": "7.5 hours",
+      "display": "15.6-inch FHD Micro-Edge",
+      "weight": "1.69kg"
+    },
+    "description": "Dependable laptop for programming and office work with dual array microphones and numeric keypad."
+  },
+  {
+    "id": 26,
+    "name": "HP Pavilion Plus 14",
+    "brand": "HP",
+    "category": "Laptops",
+    "price": 78990,
+    "rating": 4.6,
+    "stock": 10,
+    "specifications": {
+      "processor": "Intel Core i7-13700H",
+      "ram": "16GB LPDDR5x",
+      "storage": "1TB SSD",
+      "graphics": "Intel Iris Xe",
+      "battery_life": "9 hours",
+      "display": "14-inch 2.8K OLED 120Hz",
+      "weight": "1.4kg"
+    },
+    "description": "Ultra-portable creator notebook with stunning 2.8K OLED display and aluminum chassis."
+  },
+  {
+    "id": 27,
+    "name": "Dell Inspiron 3520",
+    "brand": "Dell",
+    "category": "Laptops",
+    "price": 44990,
+    "rating": 4.2,
+    "stock": 16,
+    "specifications": {
+      "processor": "Intel Core i5-1235U",
+      "ram": "8GB DDR4 (Expandable)",
+      "storage": "512GB SSD",
+      "graphics": "Intel UHD Graphics",
+      "battery_life": "6 hours",
+      "display": "15.6-inch 120Hz FHD",
+      "weight": "1.65kg"
+    },
+    "description": "Reliable Dell laptop with ergonomic lift hinge design and ExpressCharge technology."
+  },
+  {
+    "id": 28,
+    "name": "Apple MacBook Air M2",
+    "brand": "Apple",
+    "category": "Laptops",
+    "price": 89900,
+    "rating": 4.8,
+    "stock": 14,
+    "specifications": {
+      "processor": "Apple M2 (8-core CPU / 8-core GPU)",
+      "ram": "8GB Unified Memory",
+      "storage": "256GB SSD",
+      "graphics": "Apple Integrated 8-core",
+      "battery_life": "18 hours",
+      "display": "13.6-inch Liquid Retina",
+      "weight": "1.24kg"
+    },
+    "description": "Strikingly thin fanless laptop with remarkable speed, silent operation and 18-hour battery endurance."
+  },
+  {
+    "id": 29,
+    "name": "boAt Wave Call 2",
+    "brand": "boAt",
+    "category": "Smartwatches",
+    "price": 1499,
+    "rating": 4.1,
+    "stock": 40,
+    "specifications": {
+      "display": "1.83-inch HD Display",
+      "calling": "Bluetooth Calling",
+      "battery_life": "5 days",
+      "fitness_tracking": "Heart Rate, SpO2, 700+ Active Modes",
+      "water_resistance": "IP67"
+    },
+    "description": "Affordable Bluetooth calling smartwatch with comprehensive health tracking and 100+ cloud watch faces."
+  },
+  {
+    "id": 30,
+    "name": "boAt Lunar Orbit",
+    "brand": "boAt",
+    "category": "Smartwatches",
+    "price": 1999,
+    "rating": 4.2,
+    "stock": 35,
+    "specifications": {
+      "display": "1.32-inch Round HD",
+      "calling": "Bluetooth Calling",
+      "battery_life": "7 days",
+      "fitness_tracking": "HR, SpO2, Sleep Monitor",
+      "water_resistance": "IP68"
+    },
+    "description": "Classic round dial smartwatch with crisp HD clarity and quick dial pad for calls."
+  },
+  {
+    "id": 31,
+    "name": "Samsung Galaxy Watch 4",
+    "brand": "Samsung",
+    "category": "Smartwatches",
+    "price": 9999,
+    "rating": 4.4,
+    "stock": 15,
+    "specifications": {
+      "display": "1.4-inch Super AMOLED",
+      "calling": "Bluetooth & Wi-Fi",
+      "battery_life": "40 hours",
+      "fitness_tracking": "Body Composition (BIA), ECG, Sleep, SpO2",
+      "water_resistance": "5ATM + IP68"
+    },
+    "description": "Wear OS smartwatch powered with Google Play apps and advanced body composition analysis."
+  },
+  {
+    "id": 32,
+    "name": "Samsung Galaxy Watch 6",
+    "brand": "Samsung",
+    "category": "Smartwatches",
+    "price": 24999,
+    "rating": 4.6,
+    "stock": 11,
+    "specifications": {
+      "display": "1.5-inch Sapphire Crystal Super AMOLED",
+      "calling": "Bluetooth Calling & LTE",
+      "battery_life": "40 hours",
+      "fitness_tracking": "Advanced Sleep Coaching, HR Zones, ECG",
+      "water_resistance": "5ATM + IP68"
+    },
+    "description": "Premium smartwatch featuring a 20% larger display, slimmer bezel, and customized heart rate zones."
+  },
+  {
+    "id": 33,
+    "name": "Apple Watch SE (2nd Gen)",
+    "brand": "Apple",
+    "category": "Smartwatches",
+    "price": 24900,
+    "rating": 4.7,
+    "stock": 12,
+    "specifications": {
+      "display": "Retina LTPO OLED",
+      "calling": "Bluetooth & Wi-Fi",
+      "battery_life": "18 hours",
+      "fitness_tracking": "Heart Rate, Crash Detection, Fall Detection, Sleep",
+      "water_resistance": "50m Water Resistant"
+    },
+    "description": "Essential features to help you stay connected, active, healthy and safe with Crash Detection."
+  },
+  {
+    "id": 34,
+    "name": "Apple Watch Series 9",
+    "brand": "Apple",
+    "category": "Smartwatches",
+    "price": 41900,
+    "rating": 4.8,
+    "stock": 8,
+    "specifications": {
+      "display": "Always-On Retina OLED (2000 nits)",
+      "calling": "Bluetooth & Cellular Option",
+      "battery_life": "18 hours (36h Low Power)",
+      "fitness_tracking": "Blood Oxygen, ECG, Temperature Sensing, Double Tap",
+      "water_resistance": "50m Swimproof"
+    },
+    "description": "Powered by the S9 SiP with magical double tap gesture and carbon-neutral case options."
+  },
+  {
+    "id": 35,
+    "name": "OnePlus Watch 2",
+    "brand": "OnePlus",
+    "category": "Smartwatches",
+    "price": 22999,
+    "rating": 4.5,
+    "stock": 10,
+    "specifications": {
+      "display": "1.43-inch AMOLED (600 nits)",
+      "calling": "Bluetooth Calling",
+      "battery_life": "100 hours in Smart Mode",
+      "fitness_tracking": "Dual-frequency GPS, Running Analysis, Stress, VO2 Max",
+      "water_resistance": "5ATM + IP68 / MIL-STD-810H"
+    },
+    "description": "Wear OS smartwatch with industry-leading 100-hour battery life and high-precision dual GPS."
+  },
+  {
+    "id": 36,
+    "name": "boAt Stone 180",
+    "brand": "boAt",
+    "category": "Speakers",
+    "price": 1299,
+    "rating": 4.2,
+    "stock": 35,
+    "specifications": {
+      "power_output": "5W RMS",
+      "battery_life": "10 hours",
+      "wireless": true,
+      "connectivity": "Bluetooth 5.0, AUX",
+      "water_resistance": "IPX7 Waterproof"
+    },
+    "description": "Compact and rugged wireless portable speaker with powerful sound and IPX7 water resistance."
+  },
+  {
+    "id": 37,
+    "name": "boAt Stone 1200F",
+    "brand": "boAt",
+    "category": "Speakers",
+    "price": 3499,
+    "rating": 4.3,
+    "stock": 20,
+    "specifications": {
+      "power_output": "14W RMS",
+      "battery_life": "9 hours",
+      "wireless": true,
+      "connectivity": "Bluetooth 5.0, AUX, USB, FM",
+      "water_resistance": "IPX7 Waterproof",
+      "rgb_lights": true
+    },
+    "description": "Party bluetooth speaker with dynamic RGB LEDs, 14W stereo sound and integrated carry handle."
+  },
+  {
+    "id": 38,
+    "name": "JBL Go 3",
+    "brand": "JBL",
+    "category": "Speakers",
+    "price": 2999,
+    "rating": 4.5,
+    "stock": 30,
+    "specifications": {
+      "power_output": "4.2W RMS",
+      "battery_life": "5 hours",
+      "wireless": true,
+      "connectivity": "Bluetooth 5.1",
+      "water_resistance": "IP67 Waterproof & Dustproof"
+    },
+    "description": "Pocket-sized speaker with bold styling, rich JBL Pro Sound, and ultra-durable fabric."
+  },
+  {
+    "id": 39,
+    "name": "JBL Flip 6",
+    "brand": "JBL",
+    "category": "Speakers",
+    "price": 9999,
+    "rating": 4.7,
+    "stock": 16,
+    "specifications": {
+      "power_output": "30W 2-way Speaker",
+      "battery_life": "12 hours",
+      "wireless": true,
+      "connectivity": "Bluetooth 5.1, PartyBoost",
+      "water_resistance": "IP67 Waterproof & Dustproof"
+    },
+    "description": "Powerful 2-way speaker system delivering crystal clear highs and deep rumbling bass."
+  },
+  {
+    "id": 40,
+    "name": "Sony SRS-XB100",
+    "brand": "Sony",
+    "category": "Speakers",
+    "price": 3990,
+    "rating": 4.5,
+    "stock": 18,
+    "specifications": {
+      "power_output": "Sound Diffusion Processor",
+      "battery_life": "16 hours",
+      "wireless": true,
+      "connectivity": "Bluetooth 5.3",
+      "water_resistance": "IP67 Waterproof & Dustproof"
+    },
+    "description": "Compact wireless speaker with Sound Diffusion Processor for expansive surround-like audio."
+  },
+  {
+    "id": 41,
+    "name": "Logitech MK215 Wireless Combo",
+    "brand": "Logitech",
+    "category": "Keyboards and Mice",
+    "price": 1395,
+    "rating": 4.2,
+    "stock": 40,
+    "specifications": {
+      "type": "Keyboard & Mouse Combo",
+      "wireless": true,
+      "connectivity": "2.4GHz USB Nano Receiver",
+      "battery_life": "24-month keyboard / 5-month mouse",
+      "range": "10 meters"
+    },
+    "description": "Space-saving compact wireless keyboard and mouse combo with reliable 2.4GHz connection."
+  },
+  {
+    "id": 42,
+    "name": "Logitech MX Master 3S",
+    "brand": "Logitech",
+    "category": "Keyboards and Mice",
+    "price": 9495,
+    "rating": 4.8,
+    "stock": 15,
+    "specifications": {
+      "type": "Ergonomic Wireless Mouse",
+      "wireless": true,
+      "connectivity": "Bluetooth & Logi Bolt USB",
+      "sensor": "8000 DPI Darkfield (tracks on glass)",
+      "battery_life": "70 days (USB-C rechargeable)",
+      "special": "MagSpeed Electromagnetic Scroll"
+    },
+    "description": "Industry benchmark performance mouse with quiet clicks and ultra-fast MagSpeed scrolling."
+  },
+  {
+    "id": 43,
+    "name": "Logitech MX Mechanical Mini",
+    "brand": "Logitech",
+    "category": "Keyboards and Mice",
+    "price": 11995,
+    "rating": 4.7,
+    "stock": 10,
+    "specifications": {
+      "type": "Low-Profile Mechanical Keyboard",
+      "wireless": true,
+      "connectivity": "Bluetooth & Logi Bolt USB",
+      "switches": "Tactile Quiet Mechanical",
+      "backlight": "Smart Ambient Backlighting",
+      "battery_life": "15 days (10 months backlight off)"
+    },
+    "description": "Minimalist wireless mechanical keyboard with fluid tactile typing and multi-device switching."
+  },
+  {
+    "id": 44,
+    "name": "Dell KM3322W Wireless Combo",
+    "brand": "Dell",
+    "category": "Keyboards and Mice",
+    "price": 1499,
+    "rating": 4.3,
+    "stock": 35,
+    "specifications": {
+      "type": "Keyboard & Mouse Combo",
+      "wireless": true,
+      "connectivity": "2.4GHz USB Wireless",
+      "battery_life": "36-month keyboard / 18-month mouse",
+      "keyboard": "Full-size with plunger keys"
+    },
+    "description": "Full-sized everyday productivity keyboard and mouse combo offering industry-leading 3-year battery."
+  },
+  {
+    "id": 45,
+    "name": "ASUS ROG Strix Scope II 96",
+    "brand": "ASUS",
+    "category": "Keyboards and Mice",
+    "price": 13990,
+    "rating": 4.7,
+    "stock": 8,
+    "specifications": {
+      "type": "Gaming Mechanical Keyboard",
+      "wireless": true,
+      "connectivity": "Tri-mode: Bluetooth, 2.4GHz, USB Wired",
+      "switches": "ROG NX Snow Pre-lubed Switches",
+      "layout": "Compact 96% Efficiency Layout"
+    },
+    "description": "Tri-mode wireless gaming mechanical keyboard with sound-dampening foam and multi-function roller."
+  },
+  {
+    "id": 46,
+    "name": "Samsung 24-inch Essential Curved Monitor",
+    "brand": "Samsung",
+    "category": "Monitors",
+    "price": 8999,
+    "rating": 4.3,
+    "stock": 20,
+    "specifications": {
+      "screen_size": "24-inch",
+      "resolution": "1920 x 1080 FHD",
+      "panel_type": "VA Curved 1800R",
+      "refresh_rate": "75Hz",
+      "ports": "HDMI, D-Sub (VGA)",
+      "features": "AMD FreeSync, Eye Saver Mode"
+    },
+    "description": "Immersive 1800R curved monitor engineered for comfortable viewing and everyday office tasks."
+  },
+  {
+    "id": 47,
+    "name": "Samsung Odyssey G5 Gaming Monitor",
+    "brand": "Samsung",
+    "category": "Monitors",
+    "price": 19999,
+    "rating": 4.5,
+    "stock": 12,
+    "specifications": {
+      "screen_size": "27-inch",
+      "resolution": "2560 x 1440 WQHD",
+      "panel_type": "VA 1000R Curved",
+      "refresh_rate": "165Hz",
+      "response_time": "1ms (MPRT)",
+      "ports": "DisplayPort 1.2, HDMI 2.0",
+      "features": "AMD FreeSync Premium, HDR10"
+    },
+    "description": "High-performance 1000R curved gaming monitor with crisp QHD resolution and rapid 165Hz response."
+  },
+  {
+    "id": 48,
+    "name": "Dell 24-inch P2422H Professional Monitor",
+    "brand": "Dell",
+    "category": "Monitors",
+    "price": 13999,
+    "rating": 4.6,
+    "stock": 15,
+    "specifications": {
+      "screen_size": "23.8-inch",
+      "resolution": "1920 x 1080 FHD",
+      "panel_type": "IPS Anti-Glare",
+      "refresh_rate": "60Hz",
+      "stand": "Height, Pivot, Swivel, Tilt Adjustable",
+      "ports": "DisplayPort, HDMI, VGA, 4x USB 3.2"
+    },
+    "description": "Ergonomic business monitor with full pivot adjustability and ComfortView Plus blue light reduction."
+  },
+  {
+    "id": 49,
+    "name": "ASUS TUF Gaming VG249Q1A",
+    "brand": "ASUS",
+    "category": "Monitors",
+    "price": 12499,
+    "rating": 4.5,
+    "stock": 18,
+    "specifications": {
+      "screen_size": "23.8-inch",
+      "resolution": "1920 x 1080 FHD",
+      "panel_type": "IPS",
+      "refresh_rate": "165Hz (Overclocked)",
+      "response_time": "1ms MPRT",
+      "ports": "DisplayPort 1.2, 2x HDMI 1.4",
+      "features": "Extreme Low Motion Blur, FreeSync Premium"
+    },
+    "description": "Fast IPS gaming display designed for competitive gamers with ultra-smooth 165Hz refresh rate."
+  },
+  {
+    "id": 50,
+    "name": "Lenovo Q24i-20 Stylish Monitor",
+    "brand": "Lenovo",
+    "category": "Monitors",
+    "price": 10999,
+    "rating": 4.4,
+    "stock": 16,
+    "specifications": {
+      "screen_size": "23.8-inch",
+      "resolution": "1920 x 1080 FHD",
+      "panel_type": "IPS Ultra-Slim",
+      "refresh_rate": "75Hz",
+      "speakers": "Dual 3W Built-in Speakers",
+      "ports": "HDMI 1.4, VGA",
+      "features": "Eyesafe Certified, Height Adjustable Stand"
+    },
+    "description": "Sleek ultra-slim monitor with designer stand, built-in dual speakers and natural low blue light."
+  }
+]
