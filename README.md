@@ -1,7 +1,7 @@
 # AI-Powered Shopping System
 ### College Software Engineering Laboratory Project (Semester 5)
 
-An end-to-end, functional, and minimalist AI Shopping Assistant built with Python Flask, HTML5/CSS3/Vanilla JavaScript, and Google Gemini API. This project demonstrates practical software engineering principles corresponding directly to **UML Experiments 5–10**.
+An end-to-end, functional AI Shopping Assistant built with Python Flask, HTML5/CSS3/Vanilla JavaScript, and the Google Gemini API. This project demonstrates practical software engineering principles corresponding directly to **UML Experiments 5–10**.
 
 ---
 
